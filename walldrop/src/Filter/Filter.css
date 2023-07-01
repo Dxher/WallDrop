@@ -1,0 +1,9 @@
+.filter-area{
+    width: 100%;
+    background-color: #1f1f1f;
+    color:white;
+    padding: 2px 20px;
+    border-radius: 2px;
+    border: #1f1f1f 2px solid;
+    display:flex;
+}
