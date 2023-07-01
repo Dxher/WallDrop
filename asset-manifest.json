@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/WallDrop/static/css/main.15146a70.css",
-    "main.js": "/WallDrop/static/js/main.d95e41aa.js",
+    "main.js": "/WallDrop/static/js/main.bdc6eb4a.js",
     "index.html": "/WallDrop/index.html",
     "main.15146a70.css.map": "/WallDrop/static/css/main.15146a70.css.map",
-    "main.d95e41aa.js.map": "/WallDrop/static/js/main.d95e41aa.js.map"
+    "main.bdc6eb4a.js.map": "/WallDrop/static/js/main.bdc6eb4a.js.map"
   },
   "entrypoints": [
     "static/css/main.15146a70.css",
-    "static/js/main.d95e41aa.js"
+    "static/js/main.bdc6eb4a.js"
   ]
 }
