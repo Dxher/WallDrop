@@ -11,17 +11,18 @@ body {
   color: #ffffff;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 16px;
 }
 
-.navbar .title {
-  font-size: 24px;
+.navbar .brand-left {
+  font-size: 25px;
   font-weight: bold;
-  margin-right: auto;
+  margin-right: 16px;
 }
 
 .navbar a {
-  color: #ffffff;
+  color: #dbdbdb;
   text-decoration: none;
   margin-left: 16px;
   font-weight: bold;
@@ -29,9 +30,23 @@ body {
 
 .navbar a:hover {
   transform: scale(1.1);
-  color: #1f45;
+  color: rgb(255, 255, 255);
   transition: ease-in-out 0.2s;
 }
+
+.joinbtn {
+  background-color: #4a148c;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.joinbtn:hover {
+  background-color: #880e4f;
+}
+
 
 .home {
   text-align: center;
@@ -39,8 +54,8 @@ body {
 }
 
 .home h1 {
-  -webkit-text-stroke: 2px rgb(39, 39, 39); /* For Safari/Chrome */
-  color: white; /* The fill color of the text */
+  -webkit-text-stroke: 2px rgb(39, 39, 39); 
+  color: white; 
 }
 
 h1 {
@@ -83,9 +98,9 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
-  padding: 0 20px; /* Add padding to the left and right edges */
-  margin-left: 20px; /* Compensate for the left padding */
-  margin-right: 20px; /* Compensate for the right padding */
+  padding: 0 20px; 
+  margin-left: 20px; 
+  margin-right: 20px; 
 }
 
 .wallpaper-card {
@@ -165,7 +180,6 @@ button:hover {
 .wallpaper-detail-card {
   display: flex;
   justify-content: center;
-  /* Add additional styling as needed */
 }
 
 .image-container {
@@ -182,7 +196,6 @@ button:hover {
 }
 .details-container {
   grid-column: 2;
-  /* Add additional styling as needed */
 }
 
 
@@ -244,12 +257,10 @@ button:hover {
 
 .contact-social img{
   width: 4rem;
-  /* Add styling for the social media section */
 }
 
 .contact-form {
   width: 50%;
-  /* Add styling for the contact form section */
 }
 
 .contact-form form {
@@ -270,4 +281,16 @@ button:hover {
 
 .contact-form button {
   padding: 8px 16px;
+}
+
+/* filter */
+
+.explore {
+  color: white;
+}
+
+.filter-area {
+  font-size: 1em;
+  display: inline-flex;
+  margin-top: 20px;
 }

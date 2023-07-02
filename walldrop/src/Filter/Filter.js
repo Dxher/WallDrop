@@ -8,7 +8,7 @@ const Filter = ({ onFilterChange }) => {
 
   return (
     <div className="filter-area">
-      <p>Filter:</p>
+      Filter:
       <select name="isAvailable" onChange={filterChange}>
         <option value="all">All</option>
         <option value="iPhone">iPhone</option>
