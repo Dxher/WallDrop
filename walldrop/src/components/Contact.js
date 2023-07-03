@@ -7,7 +7,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Handle form submission logic here
   };
 
   return (
@@ -17,13 +16,13 @@ const Contact = () => {
         <div className="contact-social">
           {/* Add your social media images here */}
           <a href="https://www.facebook.com/">
-            <img src='./assets/facebook.png' alt="Social Media 1" />
+            <img src='../assets/facebook.png' alt="Social Media 1" />
           </a>
           <a href="https://www.instagram.com/">
-            <img src="./assets/instagram.png" alt="Social Media 2" />
+            <img src="../assets/instagram.png" alt="Social Media 2" />
           </a>
           <a href="https://twitter.com/login">
-            <img src="./assets/twitter.png" alt="Social Media 3" />
+            <img src="../assets/twitter.png" alt="Social Media 3" />
           </a>
         </div>
         <div className="contact-form">

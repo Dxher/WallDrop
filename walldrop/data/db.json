@@ -5,7 +5,7 @@
       "body": "This was made for A boogie wit da Hoodie fans",
       "owner": "dx",
       "genre": "iPhone",
-      "photo": "./assets/wp1.png",
+      "photo": "../assets/wp1.png",
       "id": 3
     },
     {
@@ -13,7 +13,7 @@
       "body": "This was made for Pop Smoke fans",
       "owner": "dx",
       "genre": "iPhone",
-      "photo": "./assets/wp2.png",
+      "photo": "../assets/wp2.png",
       "id": 4
     },
     {
@@ -21,7 +21,7 @@
       "body": "This was made for Drake fans",
       "owner": "dx",
       "genre": "iPhone",
-      "photo": "./assets/wp3.png",
+      "photo": "../assets/wp3.png",
       "id": 5
     },
     {
@@ -29,7 +29,7 @@
       "body": "This was made for TheWeeknd fans",
       "owner": "dx",
       "genre": "iPhone",
-      "photo": "./assets/wp4.png",
+      "photo": "../assets/wp4.png",
       "id": 6
     },
     {
@@ -37,7 +37,7 @@
       "body": "This is for fruity people",
       "owner": "Meemo",
       "genre": "Desktop",
-      "photo": "./assets/wp5.png",
+      "photo": "../assets/wp5.png",
       "id": 7
     },
     {
@@ -45,7 +45,7 @@
       "body": "Ah. Yes. Art",
       "owner": "Meemo",
       "genre": "Desktop",
-      "photo": "./assets/wp6.png",
+      "photo": "../assets/wp6.png",
       "id": 8
     },
     {
@@ -53,7 +53,7 @@
       "body": "Motion of the milky way",
       "owner": "Meemo",
       "genre": "Desktop",
-      "photo": "./assets/wp7.png",
+      "photo": "../assets/wp7.png",
       "id": 9
     },
     {
@@ -61,7 +61,7 @@
       "body": "Cool fish",
       "owner": "Meemo",
       "genre": "Desktop",
-      "photo": "./assets/wp8.png",
+      "photo": "../assets/wp8.png",
       "id": 10
     }
   ]
