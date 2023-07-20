@@ -25,7 +25,7 @@ const Upload = () => {
     setIsPending(true);
   
     try {
-      const uploadResponse = await fetch('http://localhost:3001/upload', {
+      const uploadResponse = await fetch('https://walldrop.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -33,7 +33,7 @@ const Upload = () => {
         throw new Error('Error uploading file');
       }
   
-      const wallpaperResponse = await fetch('http://localhost:3001/wallpapers', {
+      const wallpaperResponse = await fetch('https://walldrop.onrender.com/wallpapers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(wallpaper),
