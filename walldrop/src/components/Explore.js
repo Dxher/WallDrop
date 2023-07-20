@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Explore = () => {
   const [filterValue, setFilterValue] = useState(null); // State to store the selected filter value
 
-  const { data: wallpapers, isPending, error } = useFetch('http://localhost:8000/wallpapers');
+  const { data: wallpapers, isPending, error } = useFetch('http://localhost:9000/wallpapers');
 
   const handleFilterChange = (selectedValue) => {
     setFilterValue(selectedValue);

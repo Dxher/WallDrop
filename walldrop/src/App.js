@@ -10,7 +10,6 @@ import Upload from './components/Upload';
 import WallpaperDetails from './components/WallpaperDetails';
 
 
-
 const App = () => {
     
   return (

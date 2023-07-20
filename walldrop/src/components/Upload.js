@@ -1,63 +1,76 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Dropzone from 'react-dropzone';
 
 const Upload = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [owner, setOwner] = useState('');
-  const [photo, setPhoto] = useState(null);
+  const [photo, setPhoto] = useState('');
   const [genre, setGenre] = useState('iPhone');
   const [isPending, setIsPending] = useState(false);
-  const[file, setFile] = useState();
+  const [file, setFile] = useState(null);
   const navigate = useNavigate();
 
-  function handleFileChange(event) {
-    setFile(event.target.files[0]);
-  }
-
-  const handleSubmit = (e) => {
+  const handleFileDrop = (acceptedFiles) => {
+    setFile(acceptedFiles[0]);
+  };
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const wallpaper = { title, body, owner, genre, photo};
+    const wallpaper = { title, body, owner, genre, photo: file ? file.name : null };
     const formData = new FormData();
-    formData.append('file', file)
-
+    formData.append('file', file);
+  
     setIsPending(true);
-
-    fetch('http://localhost:8000/wallpapers', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(wallpaper)
-    }).then(() => {
+  
+    try {
+      const uploadResponse = await fetch('http://localhost:3001/upload', {
+        method: 'POST',
+        body: formData,
+      });
+      if (!uploadResponse.ok) {
+        throw new Error('Error uploading file');
+      }
+  
+      const wallpaperResponse = await fetch('http://localhost:3001/wallpapers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(wallpaper),
+      });
+      if (!wallpaperResponse.ok) {
+        throw new Error('Error adding wallpaper');
+      }
+  
       setIsPending(false);
       navigate('/explore');
-    })
-
-    fetch('http://localhost:8000/upload', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-  }
+    } catch (error) {
+      console.error('Error:', error);
+      setIsPending(false);
+    }
+  };
+  
 
   return (
     <div className="upload">
       <h2>Add a New Wallpaper</h2>
       <form onSubmit={handleSubmit}>
         <label>Upload image:</label>
-        <input 
-          type="file" 
-          accept="image/*"          
-          value={photo}
-          onChange={handleFileChange}
-        />
+        <div>
+          <Dropzone onDrop={handleFileDrop}>
+            {({ getRootProps, getInputProps }) => (
+              <div {...getRootProps()}>
+                <input {...getInputProps()} />
+                <p>Drag and drop a file here, or click to select a file</p>
+              </div>
+            )}
+          </Dropzone>
+          {file && (
+            <div>
+              <p>Uploaded File: {file.name}</p>
+            </div>
+          )}
+        </div>
         <label>Genre:</label>
         <select
           required
@@ -87,12 +100,11 @@ const Upload = () => {
           value={owner}
           onChange={(e) => setOwner(e.target.value)}
         />
-        { !isPending && <button>Add Wallpaper</button>}
-        { isPending && <button disabled>Adding wallpaper...</button>}
-
+        {!isPending && <button>Add Wallpaper</button>}
+        {isPending && <button disabled>Adding wallpaper...</button>}
       </form>
     </div>
   );
-}
- 
+};
+
 export default Upload;
