@@ -59,7 +59,7 @@ app.post('/wallpapers', (req, res) => {
       owner,
       genre,
       photo: `/assets/${fileName}`, 
-      id: wallpapers.length + 1,
+      id: wallpapers.length + 3,
     };
 
     wallpapers.push(newWallpaper);

@@ -25,7 +25,7 @@ h3 {
 button {
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #4a148c;
+  background-color: #855abb;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -61,7 +61,7 @@ button {
 }
 
 .joinbtn {
-  background-color: #4a148c;
+  background-color: #855abb;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -117,7 +117,7 @@ button {
 .home button {
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #4a148c;
+  background-color: #855abb;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -166,7 +166,7 @@ button {
 .about button {
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #4a148c;
+  background-color: #855abb;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -262,6 +262,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh; 
 }
 
 .wallpaper-info h3 {
@@ -323,7 +324,7 @@ button {
   display: block;
 }
 .upload button {
-  background-color: #4a148c;
+  background-color: #855abb;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -430,7 +431,7 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #4a148c;
+  background-color: #855abb;
   color: #fff;
   border: none;
   border-radius: 4px;
