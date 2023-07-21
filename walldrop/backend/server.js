@@ -84,7 +84,7 @@ app.post('/wallpapers', (req, res) => {
 
 // New route for serving wallpaper data from db.json
 app.get('/wallpapers', (req, res) => {
-  fs.readFile(path.join(__dirname, 'data', 'db.json'), 'utf8', (err, data) => {
+  fs.readFile(path.join(__dirname, '..', 'data', 'db.json'), 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading db.json:', err);
       res.status(500).json({ error: 'Server error' });
@@ -104,7 +104,7 @@ app.get('/wallpapers/:id', (req, res) => {
     return res.status(400).json({ error: 'Invalid wallpaper ID' });
   }
 
-  fs.readFile(path.join(__dirname, 'data', 'db.json'), 'utf8', (err, data) => {
+  fs.readFile(path.join(__dirname, '..', 'data', 'db.json'), 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading db.json:', err);
       return res.status(500).json({ error: 'Server error' });
