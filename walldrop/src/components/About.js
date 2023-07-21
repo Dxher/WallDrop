@@ -6,7 +6,6 @@ const About = () => {
     console.log("test");
   };
 
-  // Scroll animation using react-spring
   const scrollAnimation = useSpring({
     from: { opacity: 0, transform: 'translateY(50px)' },
     to: { opacity: 1, transform: 'translateY(0)' },

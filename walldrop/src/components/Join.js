@@ -10,11 +10,9 @@ const Join = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform sign-up logic here (e.g., send data to server, validation, etc.)
     console.log('Form submitted:', { firstName, lastName, email, password });
     setIsSubmitted(true);
 
-    // Reset form fields
     setFirstName('');
     setLastName('');
     setEmail('');

@@ -80,7 +80,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Set the height to cover the whole viewport */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;  
@@ -135,15 +135,15 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center the content vertically */
-  min-height: 100vh; /* Set the minimum height to cover the whole viewport */
+  justify-content: center; 
+  min-height: 100vh; 
 }
 
 .about-content {
   max-width: 600px;
   margin: 0 auto;
   color: #ffffff;
-  text-align: center; /* Center the content horizontally */
+  text-align: center; 
 }
 
 .about h1 {
@@ -401,7 +401,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 .join-form {
@@ -445,6 +445,7 @@ button:hover {
 /* NotFound */
 
 .not-found {
+  height: 100vh;
   text-align: center;
   margin-top: 50px;
 }
@@ -457,4 +458,44 @@ button:hover {
 .not-found p {
   font-size: 18px;
   color: #666;
+}
+
+/* faq */
+
+.faq {
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faq h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-item p {
+  display: none;
+}
+
+.faq-item.active p {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
 }

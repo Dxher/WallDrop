@@ -11,35 +11,31 @@ const port = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 
-// Set up Multer storage configuration
-let fileName; // Define the fileName variable
+let fileName; 
 
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, '..', 'assets'), // Update the destination path
+  destination: path.join(__dirname, '..', 'public', 'assets'), 
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
     const fileExtension = path.extname(file.originalname);
-    fileName = file.fieldname + '-' + uniqueSuffix + fileExtension; // Assign the fileName value
+    fileName = file.fieldname + '-' + uniqueSuffix + fileExtension; 
     cb(null, fileName);
   },
 });
 
-// Create the Multer instance
+
 const upload = multer({ storage });
 
-// Serve static files from the "public" folder
-app.use(express.static(path.join(__dirname, '..', 'public'))); // Update the static files path
+app.use(express.static(path.join(__dirname, '..', 'public'))); 
 
-// Route for handling file upload
 app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: 'No file uploaded' });
   }
 
-  res.json({ message: 'File uploaded successfully', fileName }); // Include fileName in the response
+  res.json({ message: 'File uploaded successfully', fileName }); 
 });
 
-// Route for handling wallpaper creation
 app.post('/wallpapers', (req, res) => {
   const { title, body, owner, genre } = req.body;
 
@@ -63,7 +59,7 @@ app.post('/wallpapers', (req, res) => {
       body,
       owner,
       genre,
-      photo: `/assets/${fileName}`, // Use fileName here
+      photo: `/assets/${fileName}`,
     };
 
     wallpapers.push(newWallpaper);
@@ -82,7 +78,6 @@ app.post('/wallpapers', (req, res) => {
   });
 });
 
-// New route for serving wallpaper data from db.json
 app.get('/wallpapers', (req, res) => {
   fs.readFile(path.join(__dirname, '..', 'data', 'db.json'), 'utf8', (err, data) => {
     if (err) {
@@ -97,7 +92,6 @@ app.get('/wallpapers', (req, res) => {
   });
 });
 
-// New route for serving a specific wallpaper data from db.json
 app.get('/wallpapers/:id', (req, res) => {
   const wallpaperId = parseInt(req.params.id);
   if (isNaN(wallpaperId)) {

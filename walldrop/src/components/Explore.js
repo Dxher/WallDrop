@@ -5,7 +5,7 @@ import Filter from '../Filter/Filter';
 import { useState } from 'react';
 
 const Explore = () => {
-  const [filterValue, setFilterValue] = useState(null); // State to store the selected filter value
+  const [filterValue, setFilterValue] = useState(null); 
 
   const { data: wallpapers, isPending, error } = useFetch('https://walldrop-backend.onrender.com/wallpapers');
 
@@ -13,13 +13,11 @@ const Explore = () => {
     setFilterValue(selectedValue);
   };
 
-  // Check if wallpapers data is available
   const filteredWallpapers = wallpapers && wallpapers.filter((wallpaper) => {
     if (filterValue === null || filterValue === 'all') return true;
     return wallpaper.genre === filterValue;
   });
 
-  // Generate the title based on the selected filter
   const title = filterValue && filterValue !== 'all' ? `${filterValue}` : 'All';
 
   return (

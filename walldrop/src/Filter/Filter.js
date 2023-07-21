@@ -3,7 +3,7 @@ import React from 'react';
 const Filter = ({ onFilterChange }) => {
   const filterChange = (event) => {
     const selectedValue = event.target.value;
-    onFilterChange(selectedValue); // Call the callback function with the selected value
+    onFilterChange(selectedValue);
   };
 
   return (

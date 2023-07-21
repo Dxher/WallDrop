@@ -12,14 +12,12 @@ const Contact = () => {
     setIsSubmitted(true);
   };
 
-  // Animation for the form
   const formAnimation = useTrail(1, {
     opacity: isSubmitted ? 0 : 1,
     transform: isSubmitted ? 'translateY(50px)' : 'translateY(0)',
     delay: 500,
   });
 
-  // Animation for the thank you message
   const messageAnimation = useTrail(1, {
     opacity: isSubmitted ? 1 : 0,
     transform: isSubmitted ? 'translateY(0)' : 'translateY(50px)',
@@ -31,7 +29,6 @@ const Contact = () => {
       <h2>Contact Us</h2>
       <div className="contact-container">
         <div className="contact-social">
-          {/* Add your social media images here */}
           <a href="https://www.facebook.com/">
             <img src='./assets/facebook.png' alt="Social Media 1" />
           </a>
@@ -43,7 +40,6 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact-form">
-          {/* Form */}
           <animated.form
             style={{
               opacity: formAnimation[0].opacity,
@@ -84,7 +80,6 @@ const Contact = () => {
             <button type="submit">Send Message</button>
           </animated.form>
 
-          {/* Thank you message */}
           <animated.div
             style={{
               opacity: messageAnimation[0].opacity,
