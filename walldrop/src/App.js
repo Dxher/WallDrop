@@ -8,6 +8,7 @@ import Explore from './components/Explore';
 import Join from './components/Join';
 import Upload from './components/Upload';
 import WallpaperDetails from './components/WallpaperDetails';
+import NotFound from './components/NotFound';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/join" element={<Join />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/wallpapers/:id" element={<WallpaperDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>

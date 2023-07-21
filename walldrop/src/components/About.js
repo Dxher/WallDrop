@@ -1,19 +1,45 @@
 import React from 'react';
+import { useSpring, animated } from 'react-spring';
 
 const About = () => {
   const handleClick = () => {
     console.log("test");
   };
 
+  // Scroll animation using react-spring
+  const scrollAnimation = useSpring({
+    from: { opacity: 0, transform: 'translateY(50px)' },
+    to: { opacity: 1, transform: 'translateY(0)' },
+    delay: 500,
+  });
+
   return (
-    <section className="home">
-      <h3>At WallDrop, we aim to provide a safe space to share your passion!</h3>
-      <h3>We aim to provide quality products while giving artists an opportunity!</h3>
-      <h1>500+ contributing artists!</h1>
-      <h1>5000+ downloads!</h1>
-      <h2>Ready to join the family?</h2>
-      <h2>Make an account now!</h2>
-      <a href='/Join'><button onClick={handleClick}>Join</button></a>
+    <section className="about">
+      <div className="about-content">
+        <animated.h3 style={scrollAnimation}>
+          At WallDrop, we aim to provide a safe space to share your passion!
+        </animated.h3>
+        <animated.h3 style={scrollAnimation}>
+          We aim to provide quality products while giving artists an opportunity!
+        </animated.h3>
+        <animated.h1 style={scrollAnimation}>
+          500+ contributing artists!
+        </animated.h1>
+        <animated.h1 style={scrollAnimation}>
+          5000+ downloads!
+        </animated.h1>
+        <animated.h2 style={scrollAnimation}>
+          Ready to join the family?
+        </animated.h2>
+        <animated.h2 style={scrollAnimation}>
+          Make an account now!
+        </animated.h2>
+        <animated.a href='/Join' style={scrollAnimation}>
+          <animated.button onClick={handleClick} style={scrollAnimation}>
+            Join
+          </animated.button>
+        </animated.a>
+      </div>
     </section>
   );
 };

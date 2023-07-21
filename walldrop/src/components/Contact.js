@@ -1,13 +1,30 @@
 import React, { useState } from 'react';
+import { useTrail, animated } from 'react-spring';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
   };
+
+  // Animation for the form
+  const formAnimation = useTrail(1, {
+    opacity: isSubmitted ? 0 : 1,
+    transform: isSubmitted ? 'translateY(50px)' : 'translateY(0)',
+    delay: 500,
+  });
+
+  // Animation for the thank you message
+  const messageAnimation = useTrail(1, {
+    opacity: isSubmitted ? 1 : 0,
+    transform: isSubmitted ? 'translateY(0)' : 'translateY(50px)',
+    delay: 500,
+  });
 
   return (
     <section className="contact">
@@ -26,7 +43,15 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact-form">
-          <form onSubmit={handleSubmit}>
+          {/* Form */}
+          <animated.form
+            style={{
+              opacity: formAnimation[0].opacity,
+              transform: formAnimation[0].transform,
+              position: isSubmitted ? 'absolute' : 'static',
+            }}
+            onSubmit={handleSubmit}
+          >
             <div>
               <label htmlFor="name">Name</label>
               <input
@@ -57,7 +82,24 @@ const Contact = () => {
               ></textarea>
             </div>
             <button type="submit">Send Message</button>
-          </form>
+          </animated.form>
+
+          {/* Thank you message */}
+          <animated.div
+            style={{
+              opacity: messageAnimation[0].opacity,
+              transform: messageAnimation[0].transform,
+              position: isSubmitted ? 'static' : 'absolute',
+              width: '100%',
+            }}
+          >
+            {isSubmitted && (
+              <div>
+                <h3>Thank you for your message!</h3>
+                <p>We'll get back to you as soon as possible.</p>
+              </div>
+            )}
+          </animated.div>
         </div>
       </div>
     </section>

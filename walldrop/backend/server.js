@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 let fileName; // Define the fileName variable
 
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, '..', 'public', 'assets'), // Update the destination path
+  destination: path.join(__dirname, '..', 'assets'), // Update the destination path
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
     const fileExtension = path.extname(file.originalname);
