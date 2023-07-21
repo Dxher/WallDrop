@@ -54,12 +54,12 @@ app.post('/wallpapers', (req, res) => {
     const wallpapers = jsonData.wallpapers;
 
     const newWallpaper = {
-      id: wallpapers.length + 1,
       title,
       body,
       owner,
       genre,
-      photo: `/assets/${fileName}`,
+      photo: `/assets/${fileName}`, 
+      id: wallpapers.length + 1,
     };
 
     wallpapers.push(newWallpaper);
