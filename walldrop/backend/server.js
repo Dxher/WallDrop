@@ -97,6 +97,32 @@ app.get('/wallpapers', (req, res) => {
   });
 });
 
+// New route for serving a specific wallpaper data from db.json
+app.get('/wallpapers/:id', (req, res) => {
+  const wallpaperId = parseInt(req.params.id);
+  if (isNaN(wallpaperId)) {
+    return res.status(400).json({ error: 'Invalid wallpaper ID' });
+  }
+
+  fs.readFile(path.join(__dirname, 'data', 'db.json'), 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading db.json:', err);
+      return res.status(500).json({ error: 'Server error' });
+    }
+
+    const jsonData = JSON.parse(data);
+    const wallpapers = jsonData.wallpapers;
+    const wallpaper = wallpapers.find((wp) => wp.id === wallpaperId);
+
+    if (!wallpaper) {
+      return res.status(404).json({ error: 'Wallpaper not found' });
+    }
+
+    res.json(wallpaper);
+  });
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
