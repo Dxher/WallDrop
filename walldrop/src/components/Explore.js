@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Explore = () => {
   const [filterValue, setFilterValue] = useState(null); // State to store the selected filter value
 
-  const { data: wallpapers, isPending, error } = useFetch('http://localhost:3001/wallpapers');
+  const { data: wallpapers, isPending, error } = useFetch('https://walldrop-backend.onrender.com/wallpapers');
 
   const handleFilterChange = (selectedValue) => {
     setFilterValue(selectedValue);
