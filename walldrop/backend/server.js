@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors());
+app.use(cors({origin: 'https://walldrop.onrender.com'}));
 const port = process.env.PORT || 3001; 
 
 app.use(bodyParser.json());
@@ -79,6 +79,21 @@ app.post('/wallpapers', (req, res) => {
 
       res.status(201).json({ message: 'Wallpaper created successfully' });
     });
+  });
+});
+
+// New route for serving wallpaper data from db.json
+app.get('/wallpapers', (req, res) => {
+  fs.readFile(path.join(__dirname, 'data', 'db.json'), 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading db.json:', err);
+      res.status(500).json({ error: 'Server error' });
+      return;
+    }
+
+    const jsonData = JSON.parse(data);
+    const wallpapers = jsonData.wallpapers;
+    res.json(wallpapers);
   });
 });
 

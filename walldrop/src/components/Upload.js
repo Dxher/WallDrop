@@ -25,19 +25,17 @@ const Upload = () => {
     setIsPending(true);
   
     try {
-      const uploadResponse = await fetch('https://walldrop.onrender.com/upload', {
+      const uploadResponse = await fetch('https://walldrop-backend.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
-      if (!uploadResponse.ok) {
-        throw new Error('Error uploading file');
-      }
-  
-      const wallpaperResponse = await fetch('https://walldrop.onrender.com/wallpapers', {
+
+      const wallpaperResponse = await fetch('https://walldrop-backend.onrender.com/wallpapers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(wallpaper),
       });
+
       if (!wallpaperResponse.ok) {
         throw new Error('Error adding wallpaper');
       }

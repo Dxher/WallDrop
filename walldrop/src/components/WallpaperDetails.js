@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 const WallpaperDetails = () => {
 
     const { id } = useParams();
-    const { data: wallpaper, error, isPending } = useFetch('http://localhost:9000/wallpapers/' + id);
+    const { data: wallpaper, error, isPending } = useFetch('https://walldrop-backend.onrender.com/wallpapers/' + id);
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch('http://localhost:9000/wallpapers/' + wallpaper.id, {
+        fetch('https://walldrop-backend.onrender.com/wallpapers/' + wallpaper.id, {
             method: 'DELETE'
         }).then(() => {
             navigate('/explore');
