@@ -1,0 +1,79 @@
+{
+    "about.text1": "At WallDrop, we aim to provide a safe space to share your passion!",
+    "about.text2": "We aim to provide quality products while giving artists an opportunity!",
+    "about.text3": "500+ contributing artists!",
+    "about.text4": "5000+ downloads!",
+    "about.text5": "Ready to join the family?",
+    "about.text6": "Make an account now!",
+    "about.joinButton": "Join",
+    
+    "contact.title": "Contact Us",
+    "contact.nameLabel": "Name",
+    "contact.emailLabel": "Email",
+    "contact.messageLabel": "Message",
+    "contact.sendMessageButton": "Send Message",
+    "contact.thankYouMessage": "Thank you for your message!",
+    "contact.responseMessage": "We'll get back to you as soon as possible.",
+
+    "navbar.brand": "WallDrop",
+    "navbar.about": "About",
+    "navbar.contact": "Contact",
+    "navbar.faq": "FAQ",
+    "navbar.explore": "Explore",
+    "navbar.upload": "Upload",
+    "navbar.join": "Join",
+
+    "explore.title": "Explore",
+    "explore.all": "All",
+    "explore.loading": "Loading...",
+    "explore.error": "Error: Unable to fetch wallpapers",
+    "explore.filterTitle": "Filter by Genre:",
+
+    "faq.title": "Frequently Asked Questions",
+    "faq.question1": "How do I upload a photo",
+    "faq.answer1":
+      "Once you sign in, you can find an upload button at the top right of the page. Once there, feel free to drag and drop an image or click on the button to select an image from your device. Then, simply fill in the details, publish then voila! Your art is accessible to everyone :)",
+    "faq.question2": "Can I delete something I posted",
+    "faq.answer2":
+      "For sure! Just head into your gallery and select the desired image to remove. The delete button should be right next to the download button.",
+      
+    "home.title": "Find the perfect wallpaper for your background!",
+    "home.exploreButton": "Explore",
+
+    "join.title": "Sign Up",
+    "join.firstNameLabel": "First Name:",
+    "join.lastNameLabel": "Last Name:",
+    "join.emailLabel": "Email:",
+    "join.passwordLabel": "Password:",
+    "join.signUpButton": "Sign Up",
+    "join.accountNotCreated": "Accounts function has not yet been created.",
+    "join.apologyMessage": "I apologize for the inconvenience.",
+
+    "notFound.title": "404 - Page Not Found",
+    "notFound.message": "Oops! The page you are looking for does not exist.",
+
+    "upload.title": "Add a New Wallpaper",
+    "upload.uploadImageLabel": "Upload image:",
+    "upload.dragAndDrop": "Drag and drop a file here",
+    "upload.orClick": "or click to select a file",
+    "upload.genreLabel": "Genre:",
+    "upload.iphoneOption": "iPhone",
+    "upload.desktopOption": "Desktop",
+    "upload.wallpaperTitleLabel": "Wallpaper title:",
+    "upload.wallpaperDescriptionLabel": "Wallpaper description:",
+    "upload.wallpaperOwnerLabel": "Wallpaper owner: (could be a stage name)",
+    "upload.addWallpaperButton": "Add Wallpaper",
+    "upload.addingWallpaperButton": "Adding wallpaper...",
+    "upload.uploadedFileText": "Uploaded File:",
+
+    "wallpaperDetails.loading": "Loading...",
+    "wallpaperDetails.downloadButton": "Download",
+    "wallpaperDetails.publisher": "Publisher:",
+    "wallpaperDetails.madeFor": "Made for:",
+
+    "wallpaperList.madeBy": "Made by"
+  
+}
+
+      
+  

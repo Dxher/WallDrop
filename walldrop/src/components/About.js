@@ -1,7 +1,10 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   const handleClick = () => {
     console.log("test");
   };
@@ -16,26 +19,26 @@ const About = () => {
     <section className="about">
       <div className="about-content">
         <animated.h3 style={scrollAnimation}>
-          At WallDrop, we aim to provide a safe space to share your passion!
+          {t('about.text1')}
         </animated.h3>
         <animated.h3 style={scrollAnimation}>
-          We aim to provide quality products while giving artists an opportunity!
+          {t('about.text2')}
         </animated.h3>
         <animated.h1 style={scrollAnimation}>
-          500+ contributing artists!
+          {t('about.text3')}
         </animated.h1>
         <animated.h1 style={scrollAnimation}>
-          5000+ downloads!
+          {t('about.text4')}
         </animated.h1>
         <animated.h2 style={scrollAnimation}>
-          Ready to join the family?
+          {t('about.text5')}
         </animated.h2>
         <animated.h2 style={scrollAnimation}>
-          Make an account now!
+          {t('about.text6')}
         </animated.h2>
         <animated.a href='/#/join' style={scrollAnimation}>
           <animated.button onClick={handleClick} style={scrollAnimation}>
-            Join
+            {t('about.joinButton')}
           </animated.button>
         </animated.a>
       </div>

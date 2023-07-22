@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Join = () => {
+  const { t } = useTranslation();
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -22,11 +25,11 @@ const Join = () => {
   return (
     <div>
       <div className="join-container">
-      <h1>Sign Up</h1>
+        <h1>{t('join.title')}</h1>
         {!isSubmitted ? (
           <form onSubmit={handleSubmit} className="join-form">
             <div className="form-group">
-              <label htmlFor="firstName">First Name:</label>
+              <label htmlFor="firstName">{t('join.firstNameLabel')}</label>
               <input
                 type="text"
                 id="firstName"
@@ -36,7 +39,7 @@ const Join = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="lastName">Last Name:</label>
+              <label htmlFor="lastName">{t('join.lastNameLabel')}</label>
               <input
                 type="text"
                 id="lastName"
@@ -46,7 +49,7 @@ const Join = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">{t('join.emailLabel')}</label>
               <input
                 type="email"
                 id="email"
@@ -56,7 +59,7 @@ const Join = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password:</label>
+              <label htmlFor="password">{t('join.passwordLabel')}</label>
               <input
                 type="password"
                 id="password"
@@ -65,12 +68,12 @@ const Join = () => {
                 required
               />
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit">{t('join.signUpButton')}</button>
           </form>
         ) : (
           <div className="join-form">
-            <h2 style={{ color: '#666' }}>Accounts function has not yet been created.</h2>
-            <p >I apologize for the inconvenience.</p>
+            <h2 style={{ color: '#666' }}>{t('join.accountNotCreated')}</h2>
+            <p>{t('join.apologyMessage')}</p>
           </div>
         )}
       </div>

@@ -1,34 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 const CustomNavbar = () => {
+  const { t } = useTranslation();
+
   return (
-<Navbar bg="dark" variant="dark" expand="lg" className="navbar">
+    <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand-left">
-          WallDrop
+          {t('navbar.brand')}
         </Navbar.Brand>
       </Container>
       <Navbar.Collapse id="navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link as={Link} to="/about">
-            About
+            {t('navbar.about')}
           </Nav.Link>
           <Nav.Link as={Link} to="/contact">
-            Contact
+            {t('navbar.contact')}
           </Nav.Link>
           <Nav.Link as={Link} to="/faq">
-            FAQ
+            {t('navbar.faq')}
           </Nav.Link>
           <Nav.Link as={Link} to="/explore">
-            Explore
+            {t('navbar.explore')}
           </Nav.Link>
           <Nav.Link as={Link} to="/upload">
-            Upload
+            {t('navbar.upload')}
           </Nav.Link>
           <Nav.Link as={Link} to="/join" className="joinbtn">
-            Join
+            {t('navbar.join')}
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

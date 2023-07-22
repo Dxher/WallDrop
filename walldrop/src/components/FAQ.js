@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const FAQ = () => {
+  const { t } = useTranslation();
+
   const faqData = [
     {
-      question: 'How do I upload a photo',
-      answer:
-        'Once you sign in, you can find an upload button at the top right of the page. Once there, feel free to drag and drop an image or click on the button to select an image from your device. Then, simply fill in the details, publish then voila! Your art is accessible to everyone :) ',
+      question: t('faq.question1'),
+      answer: t('faq.answer1'),
     },
     {
-      question: 'Can I delete something I posted',
-      answer:
-        'For sure! Just head into your gallery and select the desired image to remove. The delete button should be right next to the download button.',
+      question: t('faq.question2'),
+      answer: t('faq.answer2'),
     },
   ];
 
@@ -22,7 +23,7 @@ const FAQ = () => {
 
   return (
     <div className="faq">
-      <h2>Frequently Asked Questions</h2>
+      <h2>{t('faq.title')}</h2>
       <div className="faq-list">
         {faqData.map((item, index) => (
           <div

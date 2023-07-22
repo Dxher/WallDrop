@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const [animationsComplete, setAnimationsComplete] = useState(false);
 
   const backgroundAnimation = useSpring({
@@ -30,9 +33,9 @@ const Home = () => {
       <animated.div className="background-animation" style={backgroundAnimation} />
 
       <animated.div className="content" style={contentAnimation}>
-        <h1>Find the perfect wallpaper for your background!</h1>
+        <h1>{t('home.title')}</h1>
         <Link to="/explore">
-          <button>Explore</button>
+          <button>{t('home.exploreButton')}</button>
         </Link>
       </animated.div>
     </section>

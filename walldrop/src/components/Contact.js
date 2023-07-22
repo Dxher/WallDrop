@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useTrail, animated } from 'react-spring';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -26,7 +29,7 @@ const Contact = () => {
 
   return (
     <section className="contact">
-      <h2>Contact Us</h2>
+      <h2>{t('contact.title')}</h2>
       <div className="contact-container">
         <div className="contact-social">
           <a href="https://www.facebook.com/">
@@ -49,7 +52,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
           >
             <div>
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">{t('contact.nameLabel')}</label>
               <input
                 type="text"
                 id="name"
@@ -59,7 +62,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t('contact.emailLabel')}</label>
               <input
                 type="email"
                 id="email"
@@ -69,7 +72,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{t('contact.messageLabel')}</label>
               <textarea
                 id="message"
                 value={message}
@@ -77,7 +80,7 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit">{t('contact.sendMessageButton')}</button>
           </animated.form>
 
           <animated.div
@@ -90,8 +93,8 @@ const Contact = () => {
           >
             {isSubmitted && (
               <div>
-                <h3>Thank you for your message!</h3>
-                <p>We'll get back to you as soon as possible.</p>
+                <h3>{t('contact.thankYouMessage')}</h3>
+                <p>{t('contact.responseMessage')}</p>
               </div>
             )}
           </animated.div>

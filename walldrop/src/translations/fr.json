@@ -1,0 +1,79 @@
+{
+    "about.text1": "Chez WallDrop, nous visons à fournir un espace sécurisé pour partager votre passion !",
+    "about.text2": "Nous visons à fournir des produits de qualité tout en offrant aux artistes une opportunité !",
+    "about.text3": "Plus de 500 artistes contributeurs !",
+    "about.text4": "Plus de 5000 téléchargements !",
+    "about.text5": "Prêt à rejoindre la famille ?",
+    "about.text6": "Créez un compte maintenant !",
+    "about.joinButton": "Rejoindre",
+  
+  
+    "contact.title": "Contactez-nous",
+    "contact.nameLabel": "Nom",
+    "contact.emailLabel": "Email",
+    "contact.messageLabel": "Message",
+    "contact.sendMessageButton": "Envoyer le message",
+    "contact.thankYouMessage": "Merci pour votre message !",
+    "contact.responseMessage": "Nous vous répondrons dès que possible.",
+
+
+    "navbar.brand": "WallDrop",
+    "navbar.about": "À propos",
+    "navbar.contact": "Contact",
+    "navbar.faq": "FAQ",
+    "navbar.explore": "Explorer",
+    "navbar.upload": "Télécharger",
+    "navbar.join": "Rejoindre",
+    
+    "explore.title": "Explorer",
+    "explore.all": "Tous",
+    "explore.loading": "Chargement...",
+    "explore.error": "Erreur : Impossible de récupérer les fonds d'écran",
+    "explore.filterTitle": "Filtrer par genre :",
+
+    "faq.title": "Questions fréquemment posées",
+    "faq.question1": "Comment puis-je télécharger une photo",
+    "faq.answer1":
+      "Une fois connecté, vous pouvez trouver un bouton de téléchargement en haut à droite de la page. Une fois là-bas, n'hésitez pas à glisser-déposer une image ou cliquez sur le bouton pour sélectionner une image depuis votre appareil. Ensuite, remplissez simplement les détails, publiez et voilà ! Votre art est accessible à tous :)",
+    "faq.question2": "Puis-je supprimer quelque chose que j'ai publié",
+    "faq.answer2":
+      "Bien sûr ! Il suffit de vous rendre dans votre galerie et de sélectionner l'image souhaitée à supprimer. Le bouton de suppression devrait être juste à côté du bouton de téléchargement.",
+    
+    "home.title": "Trouvez le fond d'écran parfait pour votre arrière-plan !",
+    "home.exploreButton": "Explorer",
+
+    "join.title": "S'inscrire",
+    "join.firstNameLabel": "Prénom :",
+    "join.lastNameLabel": "Nom de famille :",
+    "join.emailLabel": "Email :",
+    "join.passwordLabel": "Mot de passe :",
+    "join.signUpButton": "S'inscrire",
+    "join.accountNotCreated": "La fonction de création de compte n'a pas encore été implémentée.",
+    "join.apologyMessage": "Je m'excuse pour l'inconvenience.",
+
+    "notFound.title": "404 - Page non trouvée",
+    "notFound.message": "Oops ! La page que vous recherchez n'existe pas.",
+
+    "upload.title": "Ajouter un nouveau fond d'écran",
+    "upload.uploadImageLabel": "Télécharger une image :",
+    "upload.dragAndDrop": "Glisser-déposer un fichier ici",
+    "upload.orClick": "ou cliquez pour sélectionner un fichier",
+    "upload.genreLabel": "Genre :",
+    "upload.iphoneOption": "iPhone",
+    "upload.desktopOption": "Bureau",
+    "upload.wallpaperTitleLabel": "Titre du fond d'écran :",
+    "upload.wallpaperDescriptionLabel": "Description du fond d'écran :",
+    "upload.wallpaperOwnerLabel": "Propriétaire du fond d'écran : (peut être un nom de scène)",
+    "upload.addWallpaperButton": "Ajouter un fond d'écran",
+    "upload.addingWallpaperButton": "Ajout du fond d'écran...",
+    "upload.uploadedFileText": "Fichier téléchargé :",
+
+    "wallpaperDetails.loading": "Chargement...",
+    "wallpaperDetails.downloadButton": "Télécharger",
+    "wallpaperDetails.publisher": "Éditeur :",
+    "wallpaperDetails.madeFor": "Créé pour :",
+
+    "wallpaperList.madeBy": "Créé par"
+
+}
+  
