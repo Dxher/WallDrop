@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors({origin: 'https://walldrop1.onrender.com'}));
+app.use(cors({origin: 'https://walldrop.onrender.com'}));
 const port = process.env.PORT || 3001; 
 
 app.use(bodyParser.json());
