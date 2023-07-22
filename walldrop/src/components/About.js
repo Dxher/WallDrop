@@ -33,7 +33,7 @@ const About = () => {
         <animated.h2 style={scrollAnimation}>
           Make an account now!
         </animated.h2>
-        <animated.a href='/Join' style={scrollAnimation}>
+        <animated.a href='/#/join' style={scrollAnimation}>
           <animated.button onClick={handleClick} style={scrollAnimation}>
             Join
           </animated.button>
